@@ -7,60 +7,77 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.19/sweetalert2.min.css"
+        integrity="sha512-CJ5goVzT/8VLx0FE2KJwDxA7C6gVMkIGKDx31a84D7P4V3lOVJlGUhC2mEqmMHOFotYv4O0nqAOD0sEzsaLMBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div class="container bg-info">
-            <h1 class="d-block p-2  text-white text-center mt-4">Batalla de github</h1>
+        <h1 class="d-block p-2  text-white text-center mt-4">Batalla de github</h1>
         <br>
         <div class="row mt-6">
-            <div class="col-6">
+            <div class="col-6 card-user1">
                 <div class="card bg-dark" style="width: 100%;">
                     <h4 class="card-title text-center text-white">usuario 1</h4>
                     <div class="row">
                         <div class="col-9">
-                            <input style="margin-left: 20px;" type="text" id="input1" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                            <input style="margin-left: 20px;" type="text" id="input1" class="form-control"
+                                placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
                         </div>
                         <div class="col-2">
-                            <button style="margin-left: 20%;" id="btn-user1" class="btn btn-primary position-relative">GO!!!</button>
+                            <button style="margin-left: 20%;" id="btn-user1"
+                                class="btn btn-primary position-relative">GO!!!</button>
                         </div>
-    
+
                     </div>
-                   
+
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-white bg-primary">Repositories: </li>
-                            <li class="list-group-item text-white bg-primary">Folowers: </li>
-                            <li class="list-group-item text-white bg-primary">folowing: </li>
-                            <li class="list-group-item text-white bg-primary">Gists: </li>
-                            <li class="list-group-item text-white bg-primary">Total: </li>
-                          </ul>
-    
+                            <li class="list-group-item text-white bg-primary">Repositories: <span
+                                    class="public_repos"></span></li>
+                            <li class="list-group-item text-white bg-primary">Folowers: <span class="followers"></span>
+                            </li>
+                            <li class="list-group-item text-white bg-primary">folowing: <span class="following"></span>
+                            </li>
+                            <li class="list-group-item text-white bg-primary">Gists: <span class="public_gists"></span>
+                            </li>
+                            <li class="list-group-item text-white bg-primary"><b>Total: <span class="total"></span></b>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 card-user2">
                 <div class="card bg-dark" style="width: 100%;">
                     <h4 class="card-title text-center text-white">usuario 2</h4>
                     <div class="row">
                         <div class="col-9">
-                            <input style="margin-left: 20px;" type="text" id="input2" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                            <input style="margin-left: 20px;" type="text" id="input2" class="form-control"
+                                placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
                         </div>
                         <div class="col-2">
-                            <button style="margin-left: 20px;" id="btn-user2" class="btn btn-primary position-relative">GO!!!</button>
+                            <button style="margin-left: 20px;" id="btn-user2"
+                                class="btn btn-primary position-relative">GO!!!</button>
                         </div>
-    
+
                     </div>
-                   
+
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-white bg-primary">Repositories: </li>
-                            <li class="list-group-item text-white bg-primary">Folowers: </li>
-                            <li class="list-group-item text-white bg-primary">folowing: </li>
-                            <li class="list-group-item text-white bg-primary">Gists: </li>
-                            <li class="list-group-item text-white bg-primary">Total: </li>
-                          </ul>
-    
+                            <li class="list-group-item text-white bg-primary">Repositories: <span
+                                    class="public_repos"></span></li>
+                            <li class="list-group-item text-white bg-primary">Folowers: <span class="followers"></span>
+                            </li>
+                            <li class="list-group-item text-white bg-primary">folowing: <span class="following"></span>
+                            </li>
+                            <li class="list-group-item text-white bg-primary">Gists: <span class="public_gists"></span>
+                            </li>
+                            <li class="list-group-item text-white bg-primary"><b>Total: <span class="total"></span></b>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
@@ -68,11 +85,14 @@
         <div class="d-grid gap-2 col-1 mx-auto mt-5">
             <button type="button" id="btn-batalla" class="btn btn-success position-relative">BATTLE!</button>
         </div>
-        
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.19/sweetalert2.all.min.js"
+        integrity="sha512-o/FohCnw63hew8nW4BnBfJaTjvc50EA/Uq5hDtm25VRdQGYDgsr72IGks8Ji9evnFfQjBd9S89CWlJh4+gYlEw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="codigo.js"></script>
 </body>
 
